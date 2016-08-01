@@ -7,7 +7,7 @@ using System.Reflection;
 namespace GenericApp
 {
 
-    public class MultiDictionary<K, V> : IMultiDictionary<K, V>, IEnumerable<KeyValuePair<K, V>> where V : new()
+    public class MultiDictionary<K, V> : IMultiDictionary<K, V>, IEnumerable<KeyValuePair<K, V>> where V : new() //Missing: where K : struct
     {
         
         Dictionary<K, LinkedList<V>> _dic = new Dictionary<K, LinkedList<V>>();
